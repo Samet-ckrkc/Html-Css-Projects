@@ -1,0 +1,95 @@
+<!DOCTYPE html>
+<html>
+<head>
+   <title>Ses</title>
+   <style type="text/css">
+      
+   body{
+   margin: 0;
+   padding: 0;
+   background-color: #000;
+   }
+
+  .kutu{
+   position: absolute;
+   top: 50%;
+   left: 50%;
+   transform: translate(-50%,-50%);
+  }
+   
+   .bar{
+      width: 20px;
+      height: 10px;
+      display: inline-block; 
+      animation:samet 2s linear infinite;
+      transform-origin: bottom;
+      cursor: pointer;
+       }
+
+       @keyframes samet {
+         0%{
+            background-color: #8c7ae6; 
+            transform: scaleY(0.1);
+         }
+          50%{
+            background-color: #fbc531;
+            transform: scaleY(1);
+         }
+          100%{
+            background-color: transparent;
+            transform: scaleY(0.1); 
+         }
+         }
+
+.bar1{
+ animation-delay: .1s;
+}
+.bar2{
+ animation-delay: .2s; 
+}
+.bar3{
+ animation-delay: .3s; 
+}
+.bar4{
+ animation-delay: .4s;  
+}
+.bar5{
+ animation-delay: .5s; 
+}
+.bar6{
+ animation-delay: .6s;  
+}
+.bar7{
+ animation-delay: .7s; 
+}
+.bar8{
+ animation-delay: .8s;
+}
+
+
+
+
+
+   </style>
+</head>
+<body>
+   
+  <div class="kutu"> 
+   <div class="bar bar1"></div>
+   <div class="bar bar2"></div>
+   <div class="bar bar3"></div>
+   <div class="bar bar4"></div>
+   <div class="bar bar5"></div>
+   <div class="bar bar6"></div>
+   <div class="bar bar7"></div>
+   <div class="bar bar8"></div>
+  </div>
+
+</body>
+</html>
+
+<!-- linear infinite;        animasyonun sürekli olarak terkar etmesi için 
+    transform: scaleY(0.1);  yukarıuzama-scale animasyonu büyütüyor
+
+    transparent;             küçüldüğünde gözükmemesi baştan başlıyomus gibi   
+-->

@@ -1,0 +1,71 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <title>Progress Bar</title>
+  <style type="text/css">
+    
+    body{
+      margin: 0px;
+      padding: 0px;
+      background:#fbc531;
+    }
+   
+
+.kutu{
+   position: absolute;
+   top: 50%;
+   left: 50%;
+   transform: translate(-50%,-50%);
+}
+
+.bar-dış{
+width: 250px;
+height: 50px;
+background-color: #7f8fa6;
+border-radius: 50px;
+border:solid #000 4px ;
+box-shadow: 2px 1px 2px;
+overflow: hidden;
+}
+
+
+.bar{
+  width: 0;
+  height: 100%;
+  background-color: #e84118; 
+  animation: samet 3s ease; /* burda bir kere yapar */
+  animation-iteration-count: 1;  /* ileri gittiğinde kod biter ve barın içini direk boşaltır ama bu kodla ileri gider geri gelir ve 0 da biter */
+  /*  animation: samet 3s linear infinite; */-/* burda sürekli yapar*/
+}
+ @keyframes samet{
+  
+  50%{
+    width: 100%;
+  }
+}
+
+
+  </style>
+</head>
+<body>
+ 
+  <div class="kutu">
+    <div class="bar-dış">
+       <div class="bar">
+       </div>
+    </div>
+  </div>
+
+<button>Click</button>
+
+</body>
+</html>
+
+<!--  animation: samet 3s ease; da easy linear infinite tersidir yani sayfa açılınca bir kere tekrar eder
+
+    animation-iteration-count: 1;
+    ileri gittiğinde kod biter ve barın içini direk boşaltır ama bu kodla ileri gider geri gelir ve 0 da biter
+
+    overflow: hidden; barda oluşturduğumuz şekil dış barın üstüne gelir bunu engellemek için kulanırız
+-->
+
